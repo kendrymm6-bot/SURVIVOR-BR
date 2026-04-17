@@ -11,7 +11,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = SURVIVOR_BR
 
 # Aquí incluimos el Tweak y la interfaz del menú
-SURVIVOR_BR_FILES = Tweak.x Menu.mm
+SURVIVOR_BR_FILES = Tweak.xm
 SURVIVOR_BR_CFLAGS = -fobjc-arc -w
 
 # Vinculamos con el proceso de Free Fire
