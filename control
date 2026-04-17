@@ -1,0 +1,9 @@
+Package: com.br.survivor.tweak
+Name: SURVIVOR-BR VIP
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Menu VIP Experimental para Free Fire
+Maintainer: SURVIVOR-BR Team
+Author: BR-Modder
+Section: Tweaks
