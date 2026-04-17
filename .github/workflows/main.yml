@@ -10,19 +10,20 @@ jobs:
 
       - name: Setup Theos
         run: |
-          git clone --recursive https://github.com/theos/theos.git ~/theos
-          echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+          sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
+          sudo chown -R $USER /opt/theos
+          echo "THEOS=/opt/theos" >> $GITHUB_ENV
 
       - name: Setup iOS SDK
         run: |
-          git clone https://github.com/theos/sdks.git ~/theos/sdks
+          git clone https://github.com/theos/sdks.git /opt/theos/sdks
 
       - name: Make executable
         run: chmod +x build.sh
 
       - name: Compile Tweak
         run: |
-          export THEOS=$HOME/theos
+          export THEOS=/opt/theos
           ./build.sh
 
       - name: Upload Artifact
